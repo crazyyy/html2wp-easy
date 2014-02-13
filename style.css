@@ -1,185 +1,182 @@
 /*
-Theme Name: 	WP Easy
-Theme URI: 		https://github.com/crazyyy/wp-easy
-Description: 	Приветствую. <br />Тема создана для удобной интеграции шаблонов в WordPress, поддерживает все современыне фишки, минимизированная.<br />Если вам нужна интеграция вашего шаблона на WP, верстка или внести правки - обращайтесь в поддержку - http://saitobaza.ru/, icq 633-308-800 
-Version: 		14-02-12
-Author: 		crazyyy and others
-Author URI: 	http://saitobaza.ru/
-Tags: 			HTML5, CSS3
+Theme Name:   WP Easy
+Theme URI:    https://github.com/crazyyy/wp-easy
+Description:  Приветствую. <br />Тема создана для удобной интеграции шаблонов в WordPress, поддерживает все современыне фишки, минимизированная.<br />Если вам нужна интеграция вашего шаблона на WP, верстка или внести правки - обращайтесь в поддержку - http://saitobaza.ru/, icq 633-308-800 
+Version:    14-02-12
+Author:     crazyyy and others
+Author URI:   http://saitobaza.ru/
+Tags:       HTML5, CSS3
 
-License:	MIT
-License URI:	http://opensource.org/licenses/mit-license.php
+License:  MIT
+License URI:  http://opensource.org/licenses/mit-license.php
 */
 @import url('css/normalize.min.css');
 
 html {
-	height: 100%;
+  height: 100%;
 }
 .chromeframe {
     margin: 0 0 5px;
+    padding: 5px 0;
     background: #ccc;
     color: #000;
-    padding: 5px 0;
 }
 body {
-	font-family:	Georgia, "Times New Roman", Times, serif;
-	font-size:	12px;
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 a {
-	color: blue;
-	outline: none;
-	text-decoration: underline;
+  outline: none;
+  color: blue;
+  text-decoration: underline;
 }
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 p {
-	margin: 0 0 18px
+  margin: 0 0 18px;
 }
 img {
-	border: none;
-	vertical-align: middle;
+  border: none;
+  vertical-align: middle;
 }
 input {
-	vertical-align: middle;
+  vertical-align: middle;
 }
 fieldset {
-    border: 0;
     margin: 0;
     padding: 0;
+    border: 0;
 }
 textarea {
     resize: vertical;
 }
-
 #wrapper {
-	width: 980px;
-	margin: 0 auto;
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-}
-.clear {
-	clear:both;
-}
-
-/* Header
------------------------------------------------------------------------------*/
-#header {
-	height: 165px;
-	background-color:#f16529;
-}
-.backhead {
-	width:100%;
-	z-index:-50;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-.bkblock0n {
-	height:165px;
-	position: absolute;
-	top:0;
-}
-#header header {
-	position: relative;
+  margin: 0 auto;
+  min-height: 100%;
+  width: 980px;
+  height: auto !important;
+  height: 100%;
 }
 /* ==============
-		Menu
+    Header
+   ============== */
+header {
+  position: relative;
+  height: 165px;
+  background-color:#f16529;
+}
+.backhead {
+  z-index:-50;
+  width:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bkblock0n {
+  position: absolute;
+  top:0;
+  height:165px;
+}
+
+/* ==============
+    Menu
    ============== */
 .headernav {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .headnav{
-	float: left;
-	width: 100%;
-	list-style: none;
-	padding: 0;
-	margin: 0;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
 }
 .headnav li{
-	float: left;
-	position: relative;
-	display: block;
+  position: relative;
+  display: inline-block;
+  float: left;
 }
 .headnav li a{
-	display: block;
-	padding: 5px 5px;
-	margin: 0 5px;
-	color: #fff;
-	background-color: #333;
-	text-decoration: none;
-	
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.75); /* Тень текста, чтобы приподнять его на немного */
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	border-radius: 2px;
+  display: block;
+  margin: 0 5px;
+  padding: 5px 5px;
+
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.75);
 }
 .headnav li:first-child a {
-	margin-left: 0;
+  margin-left: 0;
 }
 .headnav li:last-child a {
     margin-right: 0;
 }
 .headnav li a:hover{
-	color: #fff;
-	background: #6b0c36;
-	background: rgba(107,12,54,0.75); /* Выглядит полупрозрачным */
-	text-decoration: underline;
+  background: #6b0c36;
+  background: rgba(107,12,54,0.75);
+  color: #fff;
+  text-decoration: underline;
 }
-
-/*--- ВЫПАДАЮЩИЕ ПУНКТЫ ---*/
+/*--- dropdown ---*/
 .headnav ul{
-	list-style:none;
-	position:absolute;
-	left:-9999px; /* Скрываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
-	opacity:0; /* Устнавливаем начальное состояние прозрачности */
-	-webkit-transition:0.25s linear opacity; /* В Webkit выпадающие пункты будут проявляться */
+  position: absolute;
+  left: -9999px;
+  list-style: none;
+  opacity: 0;
+  -webkit-transition: 0.25s linear opacity;
+  -moz-transition: 0.25s linear opacity;
+  -o-transition: 0.25s linear opacity;
+  transition: 0.25s linear opacity;
 }
 .headnav ul li{
-	padding-top:1px; /* Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню */
-	float:none;
+  float:none;
+  padding-top:1px;
 }
 .headnav ul a{
-	white-space:nowrap; /* Останавливаем перенос текста и создаем многострочный выпадающий пункт */
-	display:block;
+  display:block;
+  white-space:nowrap;
 }
-.headnav li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
-	left:0; /* Приносим его обратно на экран, когда нужно */
-	opacity:1; /* Делаем непрозрачным */
+.headnav li:hover ul{
+  left: 0;
+  opacity: 1;
 }
-.headnav li:hover a{ /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
-	background:#6b0c36;
-	background:rgba(107,12,54,0.75); /* Выглядит полупрозрачным */
-	text-decoration:underline;
+.headnav li:hover a{
+  background:rgba(107,12,54,0.75);
+  background:#6b0c36;
+  text-decoration:underline;
 }
-.headnav li:hover ul a{ /* Изменяем некоторые стили верхнего уровня при выводе выпадающего пункта */
-	text-decoration:none;
-	-webkit-transition:-webkit-transform 0.075s linear;
+.headnav li:hover ul a{
+  text-decoration:none;
 }
-.headnav li:hover ul li a:hover{ /* Устанавливаем стили для выпадающих пунктов, когда курсор наводится на конкретный пункт */
-	background:#333;
-	background:rgba(51,51,51,0.75); /* Будет полупрозрачным */
-	text-decoration:underline;
+.headnav li:hover ul li a:hover{
+  background:rgba(51,51,51,0.75);
+  background:#333;
+  text-decoration:underline;
 }
 /* ========================
     INTERMEDIATE: IE Fixes
    ======================== */
 nav ul li {
-	 display: inline;
+   display: inline;
 }
 .oldie nav a {
-	margin: 0 0.7%;
+  margin: 0 0.7%;
 }
 /* ==============
-		End Menu
-   ============== */   
+    End Menu
+   ============== */
+
 /* Middle
 -----------------------------------------------------------------------------*/
-#content {
-	padding: 0 0 135px;
+section {
+  padding: 0 0 135px;
 }
 
 
@@ -187,231 +184,183 @@ nav ul li {
 
 /* Footer
 -----------------------------------------------------------------------------*/
-#mainfooter {
-	width:100%;
-	margin: -135px auto 0;
-	height: 135px;
-	position: relative;
-	background-color:#f16529;
+.mainfooter {
+  margin:0 auto;
+  width: 980px;
+  height:100%;
+  background-color:#b3d4fc; 
 }
-#footer {
-	width: 980px;
-	height:100%;
-	margin:0 auto;
-	background-color:#b3d4fc;	
-}
-
-
-/* pretty )) */ 
-.opaci {
-	opacity:0.3; 
-	-moz-opacity:0.3; 
-	filter:alpha(opacity=40);
-	cursor: pointer;
-}
-.opaci:hover{
-	opacity:1.0; 
-	-moz-opacity:1.0; 
-	filter:alpha(opacity=100);
+footer {
+  position: relative;
+  margin: -135px auto 0;
+  width:100%;
+  height: 135px;
+  background-color:#f16529;
 }
 
-/* image align
+
+/* pretty  */ 
+.popacity {
+  opacity:0.3; 
+  filter:alpha(opacity=40);
+  cursor: pointer; 
+  -moz-opacity:0.3;
+}
+.popacity:hover{
+  opacity:1.0; 
+  filter:alpha(opacity=100); 
+  -moz-opacity:1.0;
+}
+
+/* wordpress default image align
 -----------------------------------------------------------------------------*/
 .aligncenter,
 div.aligncenter {
    display: block;
-   margin-left: auto;
    margin-right: auto;
+   margin-left: auto;
 }
- 
 .alignleft {
    float: left;
 }
- 
 .alignright {
    float: right;
 }
- 
 .wp-caption {
-   border: 1px solid #ddd;
-   text-align: center;
-   background-color: #f3f3f3;
-   padding-top: 4px;
    margin: 10px;
-   /* optional rounded corners for browsers that support it */
-   -moz-border-radius: 3px;
-   -khtml-border-radius: 3px;
+   padding-top: 4px;
+   border: 1px solid #ddd;
    -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
    border-radius: 3px;
+   background-color: #f3f3f3;
+   text-align: center;
+   -khtml-border-radius: 3px;
 }
- 
 .wp-caption img {
    margin: 0;
    padding: 0;
    border: 0 none;
 }
- 
 .wp-caption p.wp-caption-text {
+   margin: 0;
+   padding: 0 4px 5px;
    font-size: 11px;
    line-height: 17px;
-   padding: 0 4px 5px;
-   margin: 0;
 }
-/*
-Для красоты к строкам:
-*/
-.alignleft {
-   float: left;
-}
- 
-.alignright {
-   float: right;
-}
-/*
-Можно добавить еще параметр margin для того, чтобы сделать автоматический отступ между картинкой и текстом, в результате этот кусок кода будет выглядеть вот так:
-*/
-
 .alignleft {
    float: left;
    margin-right: 5px;
 }
- 
 .alignright {
    float: right;
    margin-left: 5px;
 }
-
 /* end of image align */
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 .ir {
-    background-color: transparent;
-    border: 0;
     overflow: hidden;
+    border: 0;
+    background-color: transparent;
     *text-indent: -9999px;
 }
-
 .ir:before {
-    content: "";
     display: block;
     width: 0;
     height: 100%;
+    content: "";
 }
-
 .hidden {
     display: none !important;
     visibility: hidden;
 }
-
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
     position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
     width: 1px;
+    height: 1px;
+    border: 0;
 }
-
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
     position: static;
+    overflow: visible;
+    clip: auto;
+    margin: 0;
     width: auto;
+    height: auto;
 }
-
 .invisible {
     visibility: hidden;
 }
-
 .clearfix:before,
 .clearfix:after {
-    content: " ";
     display: table;
+    content: " ";
 }
-
-.clearfix:after {
+.clearfix:after, .clear{
     clear: both;
 }
-
 .clearfix {
     *zoom: 1;
 }
-
 /* ==========================================================================
    Print styles
    ========================================================================== */
-
 @media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+* {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important; /* Black prints faster: h5bp.com/s */
+    text-shadow: none !important;
+}
+a,
+a:visited {
+    text-decoration: underline;
+}
+a[href]:after {
+    content: " (" attr(href) ")";
+}
+abbr[title]:after {
+    content: " (" attr(title) ")";
+}
+/*
+ * Don't show links for images, or javascript/internal links
+ */
+.ir a:after,
+a[href^="javascript:"]:after,
+a[href^="#"]:after {
+    content: "";
+}
+pre,
+blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+}
+thead {
+    display: table-header-group; /* h5bp.com/t */
+}
+tr,
+img {
+    page-break-inside: avoid;
+}
+img {
+    max-width: 100% !important;
+}
+p,
+h2,
+h3 {
+    orphans: 3;
+    widows: 3;
+}
+h2,
+h3 {
+    page-break-after: avoid;
+}
 }
