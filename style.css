@@ -201,12 +201,6 @@ section {
 
 /* Footer
 -----------------------------------------------------------------------------*/
-.mainfooter {
-  margin:0 auto;
-  width: 980px;
-  height:100%;
-  background-color:#b3d4fc; 
-}
 footer {
   position: relative;
   margin: -135px auto 0;
@@ -214,7 +208,12 @@ footer {
   height: 135px;
   background-color:#f16529;
 }
-
+.mainfooter {
+  margin:0 auto;
+  width: 980px;
+  height:100%;
+  background-color:#b3d4fc; 
+}
 
 /* pretty  */ 
 .popacity {
