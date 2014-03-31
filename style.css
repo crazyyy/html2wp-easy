@@ -26,6 +26,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-size: 100%;
 	vertical-align: baseline;
 	background: transparent;
+	list-style-type: none;
 }
 @import url('css/normalize.min.css');
 
