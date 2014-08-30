@@ -2,3 +2,6 @@
 /html2wp.sublime-workspace
 /gulp/node_modules
 /gulp/.sass-cache
+/.sass-cache
+/node_modules
+/.sublime-gulp.cache

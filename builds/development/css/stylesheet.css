@@ -1,0 +1,318 @@
+/*Theme Name:   WP Easy
+ *Theme URI:    https://github.com/crazyyy/wp-easy
+ *Description:  
+ *Version:    30-08-14
+ *Author:     crazyyy and others
+ *Author URI:   http://saitobaza.ru/
+ *Tags:       HTML5, CSS3
+ *License:  MIT
+ *License URI:  http://opensource.org/licenses/mit-license.php */
+/* ==============
+ * Reset
+/* ============== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+/* ==============
+ * Styling
+/* ============== */
+html {
+  height: 100%;
+}
+
+.chromeframe {
+  margin: 0 0 5px;
+  padding: 5px 0;
+  color: #000;
+  background: #ccc;
+}
+
+body {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: underline;
+  color: blue;
+  outline: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+img {
+  vertical-align: middle;
+  border: none;
+}
+
+input {
+  vertical-align: middle;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#wrapper {
+  width: 980px;
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+/* ==============
+ *  Header
+ * ============== */
+header {
+  position: relative;
+  height: 165px;
+  background-color: #f16529;
+}
+
+.backhead {
+  z-index: -50;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bkblock0n {
+  position: absolute;
+  top: 0;
+  height: 165px;
+}
+
+/* ==============
+ *  Menu
+ * ============== */
+.headernav {
+  margin: 0;
+  padding: 0;
+}
+
+.headnav {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.headnav li {
+  position: relative;
+  display: inline-block;
+  float: left;
+}
+.headnav li a {
+  display: block;
+  margin: 0 5px;
+  padding: 5px 5px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 2px;
+  background-color: #333;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+}
+.headnav li:first-child a {
+  margin-left: 0;
+}
+.headnav li:last-child a {
+  margin-right: 0;
+}
+.headnav li a:hover {
+  text-decoration: underline;
+  color: #fff;
+  background-color: #6b0c36;
+  background-color: rgba(107, 12, 54, 0.75);
+}
+.headnav ul {
+  position: absolute;
+  left: -9999px;
+  list-style: none;
+  transition: .25s linear opacity;
+  opacity: 0;
+}
+.headnav ul li {
+  float: none;
+  padding-top: 1px;
+}
+.headnav ul a {
+  display: block;
+  white-space: nowrap;
+}
+.headnav li:hover ul {
+  left: 0;
+  opacity: 1;
+}
+.headnav li:hover a {
+  text-decoration: underline;
+  background-color: rgba(107, 12, 54, 0.75);
+  background-color: #6b0c36;
+}
+.headnav li:hover ul a {
+  text-decoration: none;
+}
+.headnav li:hover ul li a:hover {
+  text-decoration: underline;
+  background-color: rgba(51, 51, 51, 0.75);
+  background-color: #333;
+}
+
+/* INTERMEDIATE: IE Fixes */
+nav ul li {
+  display: inline;
+}
+
+.oldie nav a {
+  margin: 0 .7%;
+}
+
+/* ==============
+ * Middle
+/* ============== */
+.container {
+  padding: 0 0 135px;
+}
+
+/* ==============
+ * Footer
+/* ============== */
+footer {
+  position: relative;
+  width: 100%;
+  height: 135px;
+  margin: -135px auto 0;
+  background-color: #f16529;
+}
+
+.mainfooter {
+  width: 980px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #b3d4fc;
+}
+
+/* ==============
+ * WordPress img
+/* ============== */
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.alignleft {
+  float: left;
+  margin-right: 5px;
+}
+
+.alignright {
+  float: right;
+  margin-left: 5px;
+}
+
+.wp-caption {
+  margin: 10px;
+  padding-top: 4px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: #f3f3f3;
+}
+.wp-caption img {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+}
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+/* ==============
+ * Helper classes
+/* ============== */
+.ir {
+  overflow: hidden;
+  border: 0;
+  background-color: transparent;
+  *text-indent: -9999px;
+}
+.ir:before {
+  display: block;
+  width: 0;
+  height: 100%;
+  content: '';
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  position: static;
+  overflow: visible;
+  clip: auto;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before {
+  display: table;
+  content: ' ';
+}
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: ' ';
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
