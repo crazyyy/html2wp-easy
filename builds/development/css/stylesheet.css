@@ -1,11 +1,11 @@
-/*Theme Name:   WP Easy
- *Theme URI:    https://github.com/crazyyy/wp-easy
- *Description:  
- *Version:    30-08-14
- *Author:     crazyyy and others
+/*Theme Name:   HTML2WP Easy
+ *Theme URI:    https://github.com/crazyyy/html2wp-easy
+ *Description:  aparserok@gmail.com
+ *Version:      30-08-14
+ *Author:       crazyyy and others
  *Author URI:   http://saitobaza.ru/
- *Tags:       HTML5, CSS3
- *License:  MIT
+ *Tags:         HTML5, CSS3, SCSS, node.js, nulp
+ *License:      MIT
  *License URI:  http://opensource.org/licenses/mit-license.php */
 /* ==============
  * Reset
@@ -87,7 +87,7 @@ textarea {
  * ============== */
 header {
   position: relative;
-  height: 165px;
+  height: 170px;
   background-color: #f16529;
 }
 
@@ -101,7 +101,7 @@ header {
 .bkblock0n {
   position: absolute;
   top: 0;
-  height: 165px;
+  height: 170px;
 }
 
 /* ==============
@@ -192,7 +192,7 @@ nav ul li {
  * Middle
 /* ============== */
 .container {
-  padding: 0 0 135px;
+  padding: 0 0 80px;
 }
 
 /* ==============
@@ -201,8 +201,8 @@ nav ul li {
 footer {
   position: relative;
   width: 100%;
-  height: 135px;
-  margin: -135px auto 0;
+  height: 80px;
+  margin: -80px auto 0;
   background-color: #f16529;
 }
 

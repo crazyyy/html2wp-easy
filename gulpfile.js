@@ -1,4 +1,5 @@
 /* https://gist.github.com/antonioOrtiz/2bf2e27b8e0a23115034 */
+/* npm install gulp gulp-if gulp-uglify gulp-util gulp-ruby-sass gulp-concat gulp-plumber gulp-browserify gulp-autoprefixer gulp-minify-html gulp-imagemin imagemin-pngcrush gulp-changed gulp-newer gulp-cache gulp-open gulp-file-include gulp-notify browser-sync  --save-dev */
 var gulp = require('gulp'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
