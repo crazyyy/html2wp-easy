@@ -1,7 +1,9 @@
 {
-"name": "var2",
+  "name": "framework",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "imagemin-optipng": "^4.0.0"
+  },
   "devDependencies": {
     "browser-sync": "^0.9.1",
     "gulp": "^3.6.2",
