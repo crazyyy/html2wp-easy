@@ -6,7 +6,7 @@ var basePaths = {
 var paths = {
     images: {
         src: basePaths.src + 'images/**',
-        dest: basePaths.dest + 'images/'
+        dest: basePaths.dest + 'img/'
     },
     scripts: {
         src: basePaths.src + 'js/',
@@ -15,6 +15,10 @@ var paths = {
     styles: {
         src: basePaths.src + 'sass/',
         dest: basePaths.dest + 'css/'
+    },
+    fonts: {
+        src: basePaths.src + 'fonts/',
+        dest: basePaths.dest + 'fonts/'
     },
     sprite: {
         src: basePaths.src + 'sprite/*'
@@ -77,6 +81,7 @@ gulp.task('style', function () {
     .pipe(plugins.combineMediaQueries({
         log: true
     }))
+    .pipe(plugins.dedupe()) 
     .pipe(plugins.sass({
         errLogToConsole:    true,
         outputStyle:        sassStyle
